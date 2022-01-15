@@ -1,0 +1,47 @@
+<!--
+콘텐츠 표현 플로우
+html 파일의 마크업을 HTML로 파싱, 랜더링
+
+콘텐츠 표현을 위해 오브젝트 모델로 변환
+DOM : Document Object Model
+CSSON : CSS Object Model
+AOM : Accessibility Object Model
+
+★★★DOM은 인터페이스 단위로 프로퍼티와 메서드를 정의하고 있습니다.  ★★★
+따라서 인터페이스를 다루는 것은 DOM을 다루는 것과 동일함.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+</head>
+<body>
+    <img src="./image/marathon.png" alt="마라톤">
+    <cite>https://en.wikipedia.org/wiki</cite>
+    <!--동기가 아닌 비동기처리되므로 img가 랜더링 끝나지 않아도 cite를 불러올수있다. -->
+</body>
+</html>
+
+<!--
+    Document Object Model은 
+    HTML 마크업을 오브젝트로 변환하므로 
+    엘리먼트가 추가되거나 삭제되어도 
+    속도에 별 영향을 받지 않는다.
+    
+    반면, CSS Object Model(CSSOM)은
+    4단계로 나누어서 변환되므로
+    속도에 영향을 받는다. 
+    1단계 ) 스타일을 반영하여 랜더링 트리를 만든다
+    2단계 ) 트리를 기준으로 사이즈(높이,넓이)와 포지션반영 레이아웃을 만든다
+    3단계 ) 시각적인 부분을 적용 페인팅(컬러)
+    4단계 ) 서버에서 이미지를 가져옴.이미지에 따라 다시 리페인팅
+    따라서 랜더링시간을 줄이기 위해서는 CSS는 되도록 간결하게 작성해야한다. 
+
+    AOM : Accessibility Object Model(접근성)
+    WAI-ARIA
+    텍스트형태로 작성된 마크업을 "음성"으로 전달할 수 있도록 
+    오브젝트 모델을 만듬 
+    
+-->
