@@ -8,3 +8,7 @@ var subObj = {subVal : 'sub'}
 subObj.__proto__ =superObj;
 console.log('subObj.subval => ', subObj.subVal);
 console.log('subObj.superVal => ', subObj.superVal);
+subObj.superVal='sub';
+console.log('superObj.superVal =>' , superObj.superVal);
+
+//강의는 13.3 Object.create() 부터~
